@@ -20,7 +20,7 @@ def resource_path(relative_path: str|Path = "") -> Path:
         # 不在 PyInstaller 环境中，使用普通路径
         base_path = Path(__file__).resolve().parent.parent.parent.parent
     
-    return base_path / relative_path
+    return base_path / "lazy" / "data" / relative_path
 
 # 文件备份抽象基类
 class BaseFileBackupHandler(metaclass=abc.ABCMeta):

@@ -13,8 +13,8 @@ def resource_path(relative_path: str) -> Path:
     except Exception:
         # 不在 PyInstaller 环境中，使用普通路径
         base_path = Path(__file__).resolve().parent.parent.parent.parent
-    
-    return base_path / relative_path
+
+    return base_path / "lazy" / "data" / relative_path
 
 class BaseConfig:
     """基本的json加载逻辑，初始化接受一个`config_name`作为文件名字，默认需要带有.json
