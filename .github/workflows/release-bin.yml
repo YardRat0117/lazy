@@ -85,8 +85,6 @@ jobs:
             --add-data "data/log_backup.json:lazy/data" \
             --add-data "data/user_backup.json:lazy/data" \
             src/lazy/__main__.py
-            $HIDDEN_IMPORTS \
-            src/lazy/__main__.py
 
       - name: Package artifact (Windows)
         if: matrix.platform == 'windows'
