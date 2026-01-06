@@ -80,6 +80,12 @@ jobs:
           pyinstaller \
             --name lazy \
             $HIDDEN_IMPORTS \
+            --add-data "data/api_list.json:lazy/data" \
+            --add-data "data/lazy_backup.json:lazy/data" \
+            --add-data "data/log_backup.json:lazy/data" \
+            --add-data "data/user_backup.json:lazy/data" \
+            src/lazy/__main__.py
+            $HIDDEN_IMPORTS \
             src/lazy/__main__.py
 
       - name: Package artifact (Windows)
